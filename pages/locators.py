@@ -21,3 +21,8 @@ class ProductPageLocators:
     PRODUCT_ADD_IN_BASKET = (By.XPATH, '//div[@class="row"]/div/h1')
     PRODUCT_ADDED_IN_BASKET = (By.XPATH, '//div[@class="alertinner "]/strong')
     PRODUCT_MESSAGE_ABOUT_ADDING = (By.CLASS_NAME, 'alertinner')
+
+
+class BasePageLocators:
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
