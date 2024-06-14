@@ -8,9 +8,16 @@ class ProductPage(BasePage):
     def add_product_in_basket(self):
         button_add_basket = self.browser.find_element(*ProductPageLocators.PRODUCT_BUTTON_ADD_IN_BASKET)
         button_add_basket.click()
-        self.solve_quiz_and_get_code()
 
     def name_book_the_same(self):
         name_book_add = self.browser.find_element(*ProductPageLocators.PRODUCT_ADD_IN_BASKET).text
         name_book_added = self.browser.find_element(*ProductPageLocators.PRODUCT_ADDED_IN_BASKET).text
         assert name_book_add == name_book_added, "Book is not verify"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.PRODUCT_ADDED_IN_BASKET), \
+            "Success message is presented, but should not be"
+
+    def should_be_disappeared_message(self):
+        assert self.is_disappeared(*ProductPageLocators.PRODUCT_ADDED_IN_BASKET), \
+            "Success message is presented, but should be disappeared"

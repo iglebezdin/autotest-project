@@ -20,4 +20,4 @@ class ProductPageLocators:
     PRODUCT_BUTTON_ADD_IN_BASKET = (By.XPATH, '//form[@id="add_to_basket_form"]/button')
     PRODUCT_ADD_IN_BASKET = (By.XPATH, '//div[@class="row"]/div/h1')
     PRODUCT_ADDED_IN_BASKET = (By.XPATH, '//div[@class="alertinner "]/strong')
-
+    PRODUCT_MESSAGE_ABOUT_ADDING = (By.CLASS_NAME, 'alertinner')
