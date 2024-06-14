@@ -26,3 +26,9 @@ class ProductPageLocators:
 class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    BASKET_LINK = (By.XPATH, '//div[@class="basket-mini pull-right hidden-xs"]/span/a')
+
+
+class BasketPageLocators:
+    BASKET_GOODS_LINK = (By.ID, 'basket-items')
+    BASKET_EMPTY_MESSAGE = (By.XPATH, '//div[@id="content_inner"]/p')
